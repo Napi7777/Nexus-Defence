@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "NEXUS Learning Commons",
+    "slug": "nexus-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "scheme": "nexus-mobile",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.nexus.learningcommons.mobile",
+      "infoPlist": {
+        "NSCameraUsageDescription": "NEXUS uses your camera for interactive peer tutoring live video sessions.",
+        "NSMicrophoneUsageDescription": "NEXUS uses your microphone for audio communication in study sessions."
+      }
+    },
+    "android": {
+      "package": "com.nexus.learningcommons.mobile",
+      "adaptiveIcon": {
+        "backgroundColor": "#2C2FA3",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#2C2FA3",
+          "sounds": []
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow NEXUS Learning Commons to access your camera for live study session video streams."
+        }
+      ],
+      "expo-status-bar",
+      "expo-font",
+      "expo-image",
+      "expo-splash-screen",
+      "expo-video",
+      "@livekit/react-native-expo-plugin",
+      "@config-plugins/react-native-webrtc"
+    ]
+  }
+}
